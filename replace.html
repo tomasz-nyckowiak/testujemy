@@ -1,0 +1,55 @@
+<!-- ALERTS -->
+<div class="alert alert-success" id="successAddCat" role="alert">
+	<p>Dodano nową kategorię!</p>
+</div>
+
+<div class="alert alert-danger" id="fail" role="alert">
+	<p>Taka kategoria już istnieje!</p>
+</div>
+
+<div class="alert alert-success" id="successDel" role="alert">
+	<p>Usunięto wybraną kategorię!</p>
+</div>
+
+<div class="alert alert-success" id="successEditCat" role="alert">
+	<p>Zapisano zmiany!</p>
+</div>
+
+<div class="alert alert-danger" id="failError" role="alert">
+	<p>Wystąpił błąd!</p>
+</div>
+
+<!-- DEFAULT MODAL BODIES -->
+<div id="messageAdd">					
+	<div id="errorMessage"></div>
+	<label for="inputNewCategory">Nazwa kategorii</label><br>
+	<input type="text" name="inputNewCategory" id="inputNewCategory" onchange="jazda()"><br><br>
+	<input type="checkbox" id="addCatLimit" name="addCatLimit">
+	<label for="addCatLimit">Włącz limit dla kategorii</label><br>
+	<label for="quantity">Ustaw miesięczny limit wydatków dla kategorii</label>
+	<input type="number" id="quantity" name="quantity" disabled>
+	<div class="mt-3">
+		<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+		<button type="button" class="btn btn-primary" onclick="go()">Zapisz</button>							
+	</div>
+</div>
+
+<div id="messageEdit">				
+	<label for="inputEditCategory">Nazwa kategorii</label><br>
+	<input type="text" name="inputEditCategory" id="inputEditCategory" onchange="jazda2()"><br><br>					
+	<input type="checkbox" id="addCatLimitEdit" name="addCatLimitEdit">
+	<label for="addCatLimitEdit">Włącz limit dla kategorii</label><br>
+	<label for="quantityEdit">Ustaw miesięczny limit wydatków dla kategorii</label>
+	<input type="number" id="quantityEdit" name="quantityEdit" disabled>
+	<div class="mt-3">
+		<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+		<button type="button" class="btn btn-primary" onclick="goEdit()">Zapisz</button>
+	</div>
+</div>
+
+<div id="messageDelete">					
+	<p>Usunięcie kategorii spowoduje utratę zapisanych w niej danych!</p>					
+	<p>Czy kontynuować?</p>
+	<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Nie</button>
+	<button type="button" class="btn btn-primary" id="confirm">Tak</button>
+</div>
