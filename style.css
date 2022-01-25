@@ -1,0 +1,12 @@
+body
+{	
+	background-color: grey;	
+	font-family: 'Arimo', sans-serif;
+	font-size: 16px;	
+}
+
+.wideBtn
+{
+	width: 100%;
+	text-align: center;
+}
