@@ -1,0 +1,17 @@
+<!-- TITLE -->
+<div id="editCatTitle">
+	<h5 class="modal-title" id="itemModalLabel">Edycja kategorii</h5>	
+</div>
+
+<!-- BODY -->
+<div id="editIncomeBody">						
+	<div id="errorMessage"></div>
+	<div id="editItemSection">
+		<label for="inputEditIncome">Nazwa kategorii</label><br>
+		<input type="text" name="inputEditIncome" id="inputEditIncome" onchange="editIncomeInput()"><br><br>
+		<div class="mt-3">
+			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+			<button type="button" class="btn btn-primary" onclick="saveChangesIncome()">Zapisz</button>						
+		</div>
+	</div>	
+</div>

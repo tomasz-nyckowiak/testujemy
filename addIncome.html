@@ -1,0 +1,17 @@
+<!-- TITLE -->
+<div id="addIncTitle">
+	<h5 class="modal-title" id="itemModalLabel">Dodawanie nowej kategorii przychodu</h5>	
+</div>
+
+<!-- BODY -->
+<div id="addIncomeBody">						
+	<div id="errorMessage"></div>
+	<div id="addItemSection">
+		<label for="inputNewIncome">Nazwa kategorii</label><br>
+		<input type="text" name="inputNewIncome" id="inputNewIncome" onchange="incomeInput()"><br><br>
+		<div class="mt-3">
+			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+			<button type="button" class="btn btn-primary" onclick="addingNewIncome()">Zapisz</button>						
+		</div>
+	</div>	
+</div>
