@@ -1,0 +1,95 @@
+<!-- ADD INCOME -->
+<div id="addIncomeSection">
+	<div id="errorMessageAddInc"></div>
+	<label for="inputNewIncome">Nazwa kategorii</label><br>
+	<input type="text" name="inputNewIncome" id="inputNewIncome" onchange="incomeInput()"><br><br>
+	<div class="mt-3">
+		<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+		<button type="button" class="btn btn-primary" onclick="addingNewIncome()">Zapisz</button>						
+	</div>
+</div>
+
+<!-- ADD EXPENSE -->
+<div id="addExpenseSection">
+	<div id="errorMessageAddExp"></div>
+	<label for="inputNewExpense">Nazwa kategorii</label><br>
+	<input type="text" name="inputNewExpense" id="inputNewExpense" onchange="expenseInput()"><br><br>
+	<input type="checkbox" id="addCatLimit" name="addCatLimit" onclick="showHideAddLimitSection(this)">
+	<label for="addCatLimit">Włącz limit dla kategorii</label><br>
+	<div id="addLimit" style="display: none">
+		<label for="quantity">Ustaw miesięczny limit wydatków dla kategorii</label><br>
+		<input type="number" id="quantity" name="quantity" min="0.01" step="0.01">
+	</div>
+	<div class="mt-3">
+		<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+		<button type="button" class="btn btn-primary" onclick="addingNewExpense()">Zapisz</button>						
+	</div>
+</div>
+
+<!-- ADD PAYMENT METHOD -->
+<div id="addPaymentMethodSection">
+	<div id="errorMessageAddPM"></div>
+	<label for="inputNewPaymentMethod">Nazwa metody</label><br>
+	<input type="text" name="inputNewPaymentMethod" id="inputNewPaymentMethod" onchange="paymentMethodInput()"><br><br>						
+	<div class="mt-3">
+		<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+		<button type="button" class="btn btn-primary" onclick="addingNewMethod()">Zapisz</button>							
+	</div>
+</div>
+
+<!-- EDIT INCOME -->
+<div id="editIncomeSection">				
+	<div id="errorMessageEditInc"></div>
+	<label for="inputEditIncome">Nazwa kategorii</label><br>
+	<input type="text" name="inputEditIncome" id="inputEditIncome" onchange="editIncomeInput()">
+	<div class="mt-3">
+		<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+		<button type="button" class="btn btn-primary" onclick="saveChangesIncome()">Zapisz</button>
+	</div>
+</div>
+
+<!-- EDIT EXPENSE -->
+<div id="editExpenseSection">					
+	<div id="errorMessageEditExp"></div>
+	<label for="inputEditExpense">Nazwa kategorii</label><br>
+	<input type="text" name="inputEditExpense" id="inputEditExpense" onchange="editExpenseInput()"><br><br>					
+	<input type="checkbox" id="editCatLimit" name="editCatLimit" onclick="showHideEditLimitSection(this)">
+	<label for="editCatLimit">Włącz limit dla kategorii</label><br>
+	<div id="editLimit" style="display: none">
+		<label for="quantityEdit">Ustaw miesięczny limit wydatków dla kategorii</label><br>
+		<input type="number" id="quantityEdit" name="quantityEdit" min="0.01" step="0.01">
+	</div>
+	<div class="mt-3">
+		<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+		<button type="button" class="btn btn-primary" onclick="saveChangesExpense()">Zapisz</button>
+	</div>
+</div>
+
+<!-- EDIT PAYMENT METHOD -->
+<div id="editPaymentMethodSection">
+	<div id="errorMessageEditPM"></div>
+	<label for="inputEditPM">Nazwa metody</label><br>
+	<input type="text" name="inputEditPM" id="inputEditPM" onchange="editPMInput()">
+	<div class="mt-3">
+		<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+		<button type="button" class="btn btn-primary" onclick="saveChangesPM()">Zapisz</button>
+	</div>
+</div>
+
+<!-- DELETE CATEGORY -->
+<div id="deleteCategorySection">
+	<input type="hidden" name="delCatID" id="delCatID" value="">					
+	<p>Usunięcie kategorii spowoduje utratę zapisanych w niej danych!</p>					
+	<p>Czy kontynuować?</p>
+	<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Nie</button>
+	<button type="button" class="btn btn-primary" id="confirmDeleteCat">Tak</button>
+</div>
+
+<!-- DELETE PAYMENT METHOD -->
+<div id="deletePaymentMethodSection">
+	<input type="hidden" name="delPMiD" id="delPMiD" value="">				
+	<p>Czy na pewno chcesz usunąć wybraną metodę płatności?</p>					
+	<p>(Będzie już niedostępna przy dodawaniu nowego wydatku!)</p>
+	<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Nie</button>
+	<button type="button" class="btn btn-primary" id="confirmDeletePM">Tak</button>
+</div>
